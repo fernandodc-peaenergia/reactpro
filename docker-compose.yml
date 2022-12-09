@@ -1,0 +1,13 @@
+# docker-compose.yml
+version: '3'
+services:
+  reactpro:
+    container_name: reactpro
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 8090:3000
+    volumes:
+      - /usr/app/node_modules
+      - .:/usr/app/
